@@ -1,0 +1,150 @@
+.formRecipe{
+	width:70%;
+	padding:1%;
+	border-radius:10px;
+	margin:auto;
+	background-color:#9a1e39bb;
+    box-shadow: 0px 0px 5px 1px gold;
+    margin-top:2%;
+    margin-bottom: 2%;
+}
+
+.formRecipe > div > label{
+
+	font-size: 1.6em;
+    color: #9a1e38;
+    box-shadow: 0px 0px 5px 1px #9a1e38;
+    background-color: gold;
+    width: 60%;
+    height: 40px;
+    margin: auto;
+    text-align: center;
+    border-radius: 15px;
+    font-variant-caps:petite-caps ;
+    display: block;
+    font-weight: bold;
+	
+}
+
+.formRecipe > div > p{
+
+	font-size: 0.8em;
+    color: #9a1e38;
+    box-shadow: 0px 0px 5px 1px #9a1e38;
+    background-color: gold;
+    width: 35%;
+    height: 20px;
+    margin: auto;
+    text-align: center;
+    border-radius: 15px;
+    font-variant-caps:petite-caps ;
+    display: block;
+    font-weight: bold;
+	
+}
+.formRecipe > div > span{
+
+	font-size: 1em;
+    color: #ffffff;
+    box-shadow: 0px 0px 5px 1px #9a1e38;
+    background-color: #ec0033;
+    width: 50%;
+    height: 20px;
+    margin: auto;
+    text-align: center;
+    border-radius: 2px;
+    font-variant-caps:petite-caps ;
+    display: block;
+    font-weight: bold;
+    margin-top:-2%;
+    margin-bottom: 2%;
+    font-style: oblique;
+	
+}
+
+.formRecipe > div > input[type="text"],
+.formRecipe > div > input[type="url"]{
+	width: 50%;
+    height: 25px;
+	padding:1%;
+	border:1px solid gold;
+	border-radius:3px;
+	background-color:#370a39a6;
+	margin-top: 2%;
+    margin-bottom: 2%;
+	display:inline-block;
+    color: white;
+}
+
+.formRecipe > div > input[type="number"]{
+	width: 20%;
+    height: 25px;
+	padding:1%;
+	border:1px solid gold;
+	border-radius:3px;
+	background-color:#370a39a6;
+	margin-top: 2%;
+    margin-bottom: 2%;
+	display:inline-block;
+    color: white;
+    text-align: center;
+}
+
+.formRecipe > div > input[type="submit"]{
+
+	color: gold;
+    font-size: 2em;
+    font-weight:bold;
+    background-color: #9a1e38;
+    border-color: gold;
+    font-family: monospace;
+    font-variant-caps: small-caps;
+    display: flex;
+    margin:auto;
+
+} 
+
+.formRecipe > div > input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+.formRecipe > div > textarea{
+	width:90%;
+	height:100px;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: -0%;
+	padding:1%;
+	border:1px solid gold;
+	border-radius:3px;
+	background-color:#370a39a6;
+    color: white;
+
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+	display:block;
+}
+
+.formRecipe > button{
+
+    color: gold;
+    font-size: 2em;
+    font-weight:bold;
+    background-color: #9a1e38;
+    border-color: gold;
+    font-family: monospace;
+    font-variant-caps: small-caps;
+    display: flex;
+    margin:auto;
+    
+}
+
+a{
+
+    display: block;
+    color: gold;
+    text-align: center;
+    text-decoration: none;
+    font-weight:bold;
+    padding: 0;
+}

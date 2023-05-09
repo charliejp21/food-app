@@ -1,0 +1,99 @@
+.divRecipe{
+
+    text-align: center;
+    background-color: #370a39a6;
+    padding: 1%;
+    width: 29.5%;
+    box-shadow: 0px 0px 5px 1px gold;
+    border-radius: 20px;
+    color: gold;
+    font-family: monospace;
+    font-size: 1.3em;
+    margin: 0.5%;
+    contain: content;
+
+}
+
+.divRecipe h1{
+
+    font-size: 1.8em;
+    font-variant-caps:all-small-caps ;
+}
+
+.divRecipe h2{
+
+    font-size: 1.2em;
+    color: #81c22d;
+    box-shadow: 0px 0px 5px 1px gold;
+    width: 60%;
+    margin: auto;
+    border-radius: 10px;
+    font-variant-caps:petite-caps ;
+}
+
+.divRecipe h3{
+
+    font-size: 1em;
+    font-variant-caps:petite-caps;
+    text-align: center;
+}
+
+.divRecipe > p{
+
+    font-size: 0.8em;
+
+}
+
+.divRecipe > button{
+
+    color: gold;
+    font-size: 1.5em;
+    font-weight:bold;
+    background-color: #9a1e38;
+    border-color: gold;
+    font-family: monospace;
+    font-variant-caps: small-caps;
+    display: flex;
+    margin:auto;
+    
+}
+
+.divRecipe a{
+
+    display: block;
+    color: gold;
+    text-align: center;
+    text-decoration: none;
+    font-weight:bold;
+    padding: 0;
+}
+
+.divRecipe > img{
+
+    width:100%;
+    margin: auto;
+    box-shadow: 0px 0px 5px 1px gold;
+    border-radius:8px;
+    
+}
+
+.divRecipe > .ulclass{
+
+    margin: auto;
+    text-align: center;
+}
+
+.divRecipe > ul > li{
+
+    font-size: 1em;
+    font-variant-caps:petite-caps;
+    list-style: none;
+    color: #81c22d;
+    text-align: center;
+    background-color:#370a39;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-left: 15%;
+
+}

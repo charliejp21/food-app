@@ -1,0 +1,145 @@
+.detailRecipe{
+
+    text-align: center;
+    background-color: #370a39e5;
+    padding: 2%;
+    width: 80%;
+    box-shadow: 0px 0px 5px 1px gold;
+    border-radius: 20px;
+    color: gold;
+    font-family: monospace;
+    margin: auto;
+    margin-top:1%;
+    contain: content;
+
+}
+
+.detailRecipe > ul > li{
+
+    color:white;
+    font-size: 2em;
+    font-variant-caps:petite-caps;
+    list-style: none;
+    color: #81c22d;
+    text-align: center;
+    margin: auto;
+    background-color:#370a39;
+    border-radius: 5px;
+    width: 40%;
+
+}
+
+.detailRecipe h1{
+
+    font-size: 5em;
+    font-variant-caps:all-small-caps ;
+    margin-bottom: 1%;
+}
+
+.detailRecipe h2{
+
+    font-size: 3.0em;
+    color: #81c22d;
+    box-shadow: 0px 0px 5px 1px gold;
+    width: 35%;
+    margin: auto;
+    border-radius: 10px;
+    font-variant-caps:petite-caps ;
+    text-align: center;
+}
+
+.detailRecipe h3{
+
+    font-size: 3em;
+    font-variant-caps:petite-caps;
+    display:inline;
+    color: #9a1e38;
+    text-align: center;
+}
+
+.detailRecipe p{
+
+    font-size: 1.5em;
+    display:inline-block;
+}
+
+.detailRecipe > .summary{
+
+    font-size: 1.5em;
+    display: inline-block;
+    padding: 2%;
+    line-height: 1.3;
+    background-color: #00000061;
+    border-radius: 10px;
+    margin-bottom: 3%;
+}
+
+.detailRecipe > .tableSteps{
+
+    font-size: 1em;
+    display: inline-block;
+    padding: 2%;
+    line-height: 1.3;
+    background-color: #00000061;
+    border-radius: 10px;
+    margin-top: 2%;
+
+}
+
+.detailRecipe > .tableSteps th{
+
+    background-color: #370a39;
+    color: #81c22d;
+    font-size: 1.8em;
+    font-weight: bold;
+    font-variant-caps:petite-caps;
+    padding: 0.5%;
+    width: auto;
+
+}
+
+.detailRecipe > .tableSteps td{
+
+    background-color:#370a3980;
+    color: gold;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 0.5%;
+    width: auto;
+    text-transform: uppercase;
+    padding: 1%;
+
+}
+
+.detailRecipe button{
+
+    color: gold;
+    font-size: 1.5em;
+    font-weight:bold;
+    background-color: #9a1e38;
+    border-color: gold;
+    font-family: monospace;
+    font-variant-caps: small-caps;
+    display: flex;
+    margin:auto;
+    
+}
+
+.detailRecipe a{
+
+    display: block;
+    color: gold;
+    text-align: center;
+    text-decoration: none;
+    font-weight:bold;
+    padding: 0;
+
+}
+
+.detailRecipe > img{
+
+    width: 60%;
+    border-radius:60px;
+    box-shadow: 0px 0px 5px 1px gold;
+    
+}
