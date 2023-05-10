@@ -1,4 +1,5 @@
 const getAllRecipes = require('../controllers/getRecipes')
+const getAllRecipesDb = require('../controllers/getRecipesDb')
 const postRecipe = require('../controllers/postRecipe')
 const {findRecipeById} = require('../controllers/findRecipe')
 
@@ -30,6 +31,22 @@ const getRecipesHandler = async (req, res) => {
         
         res.send(allRecipes);
     }
+
+};
+
+const getRecipesDbHandler = async (req, res) => {
+
+        try {
+
+            const AllRecipesDb = await getAllRecipesDb();
+
+            res.send(AllRecipesDb);
+            
+        } catch (error) {
+            
+            return res.status(401).send("Error")
+            
+        }
 
 };
 
@@ -67,6 +84,7 @@ module.exports = {
 
     getRecipesHandler,
     getRecipeByIdHandler,
+    getRecipesDbHandler,
     createRecipeHandler
 
 }

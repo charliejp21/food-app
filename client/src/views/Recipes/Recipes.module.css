@@ -52,6 +52,7 @@
 	flex-flow: row wrap;
 	justify-content: space-between;
 	padding-top: 30px;
+	justify-content: flex-start;
 }
 
 .selectsContainer {

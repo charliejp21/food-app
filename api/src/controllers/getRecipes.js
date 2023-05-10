@@ -5,8 +5,11 @@ const {Recipe, Diets} = require('../db')
 
 const getAllRecipes = async () => {
 
-    const allRecipes = await Recipe.findAll({attributes: ["id", "name", "summary", "healthScore", "steps", "image"],
+    const allRecipes = await Recipe.findAll({
+		
+		attributes: ["id", "name", "summary", "healthScore", "steps", "image"],
 		include: { model: Diets },
+	
 	});
 
 	const responseDb = await allRecipes.map((x) => {
@@ -20,6 +23,7 @@ const getAllRecipes = async () => {
 			image:
 				x.dataValues.image ||
 				"https://st3.depositphotos.com/1064969/18252/v/450/depositphotos_182528054-stock-illustration-flat-grayscale-icon-burger.jpg",
+			diets: x.dataValues.Diets.map((y) => y.name)
 
 		};
 	});

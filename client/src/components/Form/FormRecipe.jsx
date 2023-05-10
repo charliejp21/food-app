@@ -58,10 +58,8 @@ const Form = () => {
 
     const submitHandler = (event) => {
 
-        event.preventDefault();
-
         axios.post("http://localhost:3001/recipes/create", form)
-        .then(res => alert('Receta creada correctamente!'))
+        .then(alert("Receta creada correctamente"))
         
         setForm({
             name: '',
@@ -151,7 +149,6 @@ const Form = () => {
 
                 ) : (
                     
-
                     <button type="submit" disabled>
                     Enviar
                     </button>

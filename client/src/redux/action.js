@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_ALL_RECIPES, GET_RECIPES_DETAIL, GET_DIETS, GET_RECIPE_BY_NAME, FILTER_DIET, SORT, GET_PAGE } from "./action-types";
+import { GET_ALL_RECIPES,GET_ALL_RECIPES_DB, GET_RECIPES_DETAIL, GET_DIETS, GET_RECIPE_BY_NAME, FILTER_DIET, SORT, GET_PAGE } from "./action-types";
 
 export const getAllRecipes = () => async (dispatch) => {
 
@@ -11,6 +11,21 @@ export const getAllRecipes = () => async (dispatch) => {
 
 		type: GET_ALL_RECIPES,
 		payload: recipes
+
+	});
+
+};
+
+export const getAllRecipesDb = () => async (dispatch) => {
+
+	const apiData = await axios.get("http://localhost:3001/recipes/recipesdb")
+
+	const recipesDb = apiData.data; 
+
+	dispatch({
+
+		type: GET_ALL_RECIPES_DB,
+		payload: recipesDb
 
 	});
 

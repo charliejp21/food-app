@@ -1,0 +1,48 @@
+.divResultsContainer {
+
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    gap: 1em;
+
+}
+
+.divResultsContainer > .titulo {
+
+    text-align: center;
+    background-color: gold !important;
+    padding: 1%;
+    box-shadow: 0px 0px 5px 1px #508100;
+    border-radius: 20px;
+    color: #9a1e38;
+    font-family: monospace;
+    font-variant-caps: small-caps;
+    font-size: 3.5em;
+    margin: auto;
+    margin-top: 1%;
+    display:inline-flex;
+    
+}
+
+.divResultsContainer > .recipeContainers {
+
+    display: inline-flex;
+    gap: 1em;
+    width: 100%;
+
+    
+}
+
+.h1Search{
+    font-size: 3.5em;
+    font-variant-caps:all-small-caps;
+    background-color: #9a1e39de;
+    padding: 2.5%;
+    width: 80%;
+    box-shadow: 0px 0px 5px 1px gold;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top:10%;
+}

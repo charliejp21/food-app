@@ -18,7 +18,7 @@ const Nav = () =>{
 
             <a href="/">Regresar a inicio</a>
 
-            {/* { pathname === "/home" &&  <LiSearch><SearchBar></SearchBar></LiSearch>} */}
+            <a href="/mis-recetas">Mis recetas</a>
 
             <SearchBar></SearchBar>
 

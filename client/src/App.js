@@ -5,6 +5,7 @@ import Create from './views/CreateRecipe/Create'
 import Detail from './views/Detail/Detail'
 import Nav from './components/Nav/Navbar';
 import Results from './views/SearchResults/SearchResults'
+import MisRecetas from './views/MisRecetas/MisRecetas'
 import { Route, Routes, useLocation } from 'react-router-dom';
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
         <Route path="/recipe/:id" element={<Detail />}/>
 
         <Route path="/results/:name" element={<Results />}/>
+
+        <Route path="/mis-recetas" element={<MisRecetas />}/>
 
       </Routes>
 

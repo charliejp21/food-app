@@ -23,7 +23,7 @@ const { conn } = require('./src/db.js');
 const {postDiets} = require('./src/controllers/getDiets.js')
 
 // Syncing all the models at once.
-conn.sync({ force: true}).then(async () => {
+conn.sync({ force: false}).then(async () => {
 
   await postDiets();
 

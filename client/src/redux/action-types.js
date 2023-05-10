@@ -1,4 +1,5 @@
 export const GET_ALL_RECIPES = "GET_ALL_RECIPES";
+export const GET_ALL_RECIPES_DB = "GET_ALL_RECIPES_DB";
 export const GET_RECIPE_BY_NAME = "GET_RECIPE_BY_NAME";
 export const GET_PAGE = "GET_PAGE";
 export const SORT = "SORT";
