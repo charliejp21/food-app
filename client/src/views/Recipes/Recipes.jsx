@@ -20,7 +20,7 @@ const RecipesContainer = () => {
 
 	const recipesApi = useSelector(state => state.recipes.filterData);
 
-    useEffect(() => {
+    useEffect(() => { // Recordar que useEffect se ejecuta despues de que el componente se renderiza, y está atento a cambios a secundarios
 
         dispatch(getAllRecipes())
 
@@ -36,7 +36,7 @@ const RecipesContainer = () => {
 
 		if (pagination.max.length === 1) {
 
-			setPageView(recipesApi);
+			setPageView(recipesApi); 
 
 		} else {
 
@@ -61,11 +61,11 @@ const RecipesContainer = () => {
 			setPageView(recipesApi);
 		
 		} else {
-			
+							//2          *       9 = 18           
 			max = pagination.currentPage * pagination.pageLength;
-			
+			      //18 - 9 = 9
 			min = max - pagination.pageLength;
-			
+			                            //(9, 18) -> desde la posicion 9 a la 18 
 			setPageView(recipesApi.slice(min, max));
 		
 		}
@@ -186,16 +186,19 @@ const RecipesContainer = () => {
 
 					{pagination.max.map((page) => (
 					
-					<button key={page} onClick={() => {changeHandlerPage(page); }} className={page === pagination.currentPage
+						<button key={page} onClick={() => {changeHandlerPage(page); }} 
+						
+							className={page === pagination.currentPage 
 
-									? `${style.btn} ${style.btnPage}`
+										? `${style.btn} ${style.btnPage}` //Si es página actual no hacer hover
+							
+										: `${style.btn}`
+							
+							}>
+								
+							{page}
 						
-									: `${style.btn}`
-						
-								}>
-						{page}
-					
-					</button>
+						</button>
 
 					))}
 

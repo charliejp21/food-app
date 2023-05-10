@@ -6,10 +6,10 @@ const initialState = {
 
 		data: [],
 		filterData: [],
-		activeName: "", 
 		activeFilter: "default",
 		activeSort: "default",
-		pagination: { max: [], currentPage: 1, pageLength: 9 },
+		pagination: { max: [], currentPage: 1, pageLength: 9 }, 
+		//pagination max: cantidad de paginas
 		
 	},
 
@@ -36,9 +36,9 @@ const initialState = {
 	}
 
 };
-
+// 3 funciones
 function paginador(x, y) {
-
+				//Se recibe en x recetas y en y la longitud que queremos mostrar
 	const max = Math.ceil(x.length / y);
 
 	const paginas = [];
@@ -60,7 +60,15 @@ function configSorts(arr, payload, original) {
 	if (payload === "a-z") {
 	
 		ordenamiento = arr.sort(function (x, y) {
-	
+
+			//localeCompare() se utiliza para comparar dos cadenas de texto. 
+
+			//Sort ()se  utiliza para ordenar los elementos de un arreglo
+			
+			// Cuando se utiliza localeCompare() dentro de la función de comparación que se pasa al método sort(), se compara el valor de dos elementos del arreglo utilizando las reglas de ordenamiento de cadenas del idioma actual
+
+			//sort() se utiliza para ordenar las palabras en orden alfabético. La función de comparación que se pasa al método sort() utiliza localeCompare() para comparar las palabras. Como resultado, las palabras se ordenan en orden alfabético según las reglas de ordenamiento de cadenas del idioma actual.
+
 			return x.title.localeCompare(y.title);
 	
 		});
@@ -87,20 +95,17 @@ function configSorts(arr, payload, original) {
 
 }
 
-function allFilters(arr, _name, diet, state, sort) {
+function allFilters(arr, diet, state, sort) {
 	
-	let finalRes = 
-
-	 	sort !== "default" ? arr : state.recipes.data;
+	let finalRes = sort !== "default" ? arr : state.recipes.data;
 
 	const recipesFilters = finalRes.filter((recipe) => {
 		
-	const filterByDiet = diet !== "default" ? recipe.diets.includes(diet) : true;
+		const filterByDiet = diet !== "default" ? recipe.diets.includes(diet) : true;
 
 		return filterByDiet;
 	
 	});
-
 
 	const resConfig = configSorts( recipesFilters, sort ? sort : state.recipes.activeSort, recipesFilters );
 	
@@ -113,11 +118,11 @@ const rootReducer = (state = initialState, action) => {
 	switch (action.type) {
         
 		case GET_ALL_RECIPES:
-			
-			const res = allFilters( action.payload, state.recipes.activeName, state.recipes.activeFilter, state);
+
+			const res = allFilters( action.payload, state.recipes.activeFilter, state);
 
 			const paginas = paginador(res, state.recipes.pagination.pageLength);
-
+					//           recipes , 9
 			return {
 			
 				...state,
@@ -126,7 +131,7 @@ const rootReducer = (state = initialState, action) => {
 
 					...state.recipes,
 					
-					data: action.payload,
+					data: action.payload, //ingresamos todas las recetas	
 					
 					filterData: res,
 					
@@ -224,9 +229,7 @@ const rootReducer = (state = initialState, action) => {
 
 			const newArr4 = allFilters(
 
-				state.recipes.filterData,
-
-				state.recipes.activeName,
+				state.recipes.filterData,	
 
 				state.recipes.activeFilter,
 
@@ -263,8 +266,6 @@ const rootReducer = (state = initialState, action) => {
 			const filtro = allFilters(
 
 				state.recipes.data,
-
-				state.recipes.activeName,
 
 				action.payload,
 

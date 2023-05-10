@@ -32,6 +32,7 @@ const RecipesResultsContainer = () => {
                 <div className={style.divResultsContainer}> 
                 <h2 className={style.titulo}>Se muestran los siguientes resultados:</h2>
                 <div className={style.recipeContainers}> 
+
                     {recipes.map(recipe => {
 
                         return <Recipe 
@@ -45,6 +46,7 @@ const RecipesResultsContainer = () => {
                         />
 
                     })}
+                    
                 </div>
                 
             </div>)
@@ -53,7 +55,7 @@ const RecipesResultsContainer = () => {
 
             (
 
-                <h1 className={style.h1Search}>Sin recetas para mostrar</h1>
+                <h1 className={style.h1Search}>Prueba buscando de otra manera</h1>
                 
             )
         }
